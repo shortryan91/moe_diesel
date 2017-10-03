@@ -1,0 +1,14 @@
+
+<h1>welcome <%= @client.name %></h1>
+
+<a href="/profile/add_car"> Add your Vehicle</a>
+
+<% if @client.cars_id != nil %>
+
+<h2><%= @car.make %></h2>
+<h2><%= @car.year %></h2>
+<h2><%= @car.registration %></h2>
+
+<% end %>
+
+<input type="date" name="" value="">
