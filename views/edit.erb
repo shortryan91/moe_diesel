@@ -1,0 +1,14 @@
+
+ <h2>Edit Your Vehicle</h2>
+
+<form class="" action="/profile" method="post">
+
+  <input type="hidden" name="_method" value="put">
+
+  <input type="text" name="make" value="<%= @car.make%>" placeholder="make">
+  <input type="text" name="year" value="<%= @car.year%>" placeholder="year">
+  <input type="text" name="registration" value="<%= @car.registration%>" placeholder="registration">
+
+  <button type="submit"> Add Your Vehicle </button>
+
+</form>

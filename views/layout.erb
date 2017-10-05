@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Moe Diesel</title>
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+</head>
+<body>
+
+  <section class="navBar">
+  <nav >
+    <img class="navLogo" src="images/logo.png" alt="">
+    <ul class="navOptions">
+      <li class="option"><a  href="/">Home</a></li>
+      <li class="option"><a href="/login">Log in</a></li>
+      <li class="option"><a href="/sign_up">sign up</a></li>
+      <li class="option"><a href="/about">About us</a></li>
+      <li class="option"><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+</section>
+<section class="userDisplay">
+
+  <% if logged_in? %>
+    <a class="backToProfile" href="/profile"> back to profile </a>
+  <% end %>
+
+  <% if logged_in? %>
+  <p class="currentUser">current user: <%= current_user.name %></p>
+  <form class="" action="/session" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button class="logOutButton">Logout</button>
+  </form>
+<% end %>
+</section>
+
+  <%= yield %>
+
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<h1 class="loginHeading">login</h1>
+
+<%= @message %>
+<form class="loginForm" action="/session" method="post">
+  <h2 class="loginDetail">Please enter your email</h2>
+  <input class="loginInput" type="text" name="email" placeholder="email">
+  <h2 class="loginDetail">Please enter your password</h2>
+  <input class="loginInput" type="password" name="password" placeholder="password">
+
+  <button class="loginButton" type="submit">Log in</button>
+</form>
+
+
+<a class="signUpButton" href="/sign_up">sign up</a>

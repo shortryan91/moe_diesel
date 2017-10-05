@@ -1,0 +1,44 @@
+
+<h1>welcome <%= current_user.name %></h1>
+
+<a class="addVehicleButton" href="/profile/add_car"> Add your Vehicle</a>
+
+<% @cars.each do |car| %>
+  <section class= "cards">
+  <h2>Make: <%= car.make %></h2>
+  <h2>Year: <%= car.year %></h2>
+  <h2>Car rego: <%= car.registration %></h2>
+
+  <a href="/profile/edit">Edit your Infomation</a>
+
+ <% if  session[:user_id]%>
+
+  <form action="/cars/<%= car.id %>" method="post">
+    <input type="hidden" name="client_id" value="<%= current_user.id %>">
+    <input type="hidden" name="_method" value="delete">
+    <button type="submit">delete</button>
+  </form>
+ <% end %>
+
+ <h2>Make a booking</h2>
+ <form action="/booking/<%= car.id%>" method="post">
+   <input type="hidden" name="car_id" value="<%= car.id %>">
+   <input type="hidden" name="client_id" value="<%= current_user.id%>">
+   <input type="date" name="date_booked" value="">
+
+   <button type="submit">book</button>
+ </form>
+
+  <%# @bookings = Booking.where(car_id: car.id) %>
+  <% car.bookings.each do |booking| %>
+   <h2><%= booking.date_booked %></h2>
+
+   <form action="/booking/<%= booking.id %>" method="post">
+     <input type="hidden" name="client_id" value="<%= current_user.id %>">
+     <input type="hidden" name="_method" value="delete">
+     <button type="submit"> delete booking </button>
+   </form>
+
+  <% end %>
+</section>
+<% end %>

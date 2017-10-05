@@ -1,0 +1,216 @@
+ * {
+   box-sizing: border-box;
+ }
+
+ body {
+   background-color: #282828;
+   font-family: 'Lora', serif;
+   margin: 0;
+ }
+
+ form {
+   display: inline-block;
+ }
+/*nav bar*/
+
+.navBar {
+ background-color: RGB(45,68,113);
+ margin: 0;
+ box-shadow: 2px 2px 8px 2px RGB(6,23, 57);
+}
+
+.navLogo {
+  display: inline-block;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-right: 25px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.navOptions {
+  display: inline-block;
+  float: right;
+  margin-right: 20px;
+  margin-top: 40px;
+}
+
+.option {
+  display: inline;
+  font-size: 30px;
+  color: RGB(6, 23, 57);
+  list-style-type: none;
+  transition: 1s;
+}
+
+.option:hover {
+  color:#fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+}
+
+input {
+  font-size: 27px;
+}
+
+
+/*home page*/
+
+.izusuAd {
+
+  height: 320px;
+  width: 100%;
+  background-image: url("http://jamesfrizelles.com.au/wp-content/uploads/2017/07/July-Isuzu-Ute-Web-Banner.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+
+}
+
+.homePage {
+
+  height: 1000px;
+  background-image: url("http://www.walthammechanical.co.nz/wp-content/uploads/2014/03/Waltham-Mechanical-Homepage-Slider-Cambelts-Background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mainHeading {
+  color: #fff;
+  text-shadow: 5px 5px 5px black;
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+  padding-top: 7%;
+  margin-top: 0;
+}
+
+.mainHeading2 {
+  color: #fff;
+  text-shadow: 5px 5px 5px black;
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+  padding-top: 9%;
+}
+
+.isuzu {
+  color: red;
+}
+
+/*log in display*/
+
+.userDisplay {
+  background-color: #7788AA;
+}
+.backToProfile {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.currentUser {
+  display: inline-block;
+ font-size: 20px;
+}
+
+.logOutButton {
+  display: inline-block;
+  margin-left: 30px;
+  font-size: 20px;
+  background-color: #7788AA;
+  border: #7788AA;
+}
+
+/*PROFILE PAGE*/
+.addVehicleButton {
+  display: block;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  padding-left: 10px;
+  box-shadow: 1px 2px 2px 1px black;
+  font-size: 20px;
+  background-color: rgba(101, 106, 105, 0.73);
+  width: 200px;
+}
+
+/*profile cards*/
+
+.cards {
+  display: inline-block;
+  width: 300px;
+  margin: 8%;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 4px 3px 5px black;
+  padding-bottom: 2%;
+  padding-left: 2%;
+}
+
+/*login page*/
+.loginHeading {
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+}
+
+.loginForm {
+  margin-left: 30%;
+  padding: 5%;
+  text-align: center;
+  background-color: #7788AA;
+  border: 2px solid black;
+}
+
+.loginDetail {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.loginForm {
+   width: 80%;
+   padding: 12px 10px;
+   margin: 8px 0;
+   margin-left: 10%;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+}
+
+.loginButton {
+  display: block;
+  padding: 10px;
+  margin-top: 40px;
+  text-align: center;
+  margin-left: 40%;
+  width: 20%;
+  border-color: RGB(45,68,113);
+  background-color: RGB(45,68,113);
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 7px;
+}
+
+.signUpButton {
+  display: block;
+  padding: 10px;
+  margin-top: 40px;
+  text-align: center;
+  margin-left: 40%;
+  width: 20%;
+  background-color: RGB(45,68,113);
+  box-shadow: 2px 2px 2px black;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 7px;
+}
