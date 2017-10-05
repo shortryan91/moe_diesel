@@ -1,6 +1,6 @@
 
-<h1>welcome <%= current_user.name %></h1>
-
+<h1 class="welcomeMessage">welcome <%= current_user.name %></h1>
+<p class="profileMessage">Welcome to your moe diesel profile here you can add your vehicle and manage your infomation needed to make a quick booking<br /> without having to fill out forms everytime you book! </p>
 <a class="addVehicleButton" href="/profile/add_car"> Add your Vehicle</a>
 
 <% @cars.each do |car| %>

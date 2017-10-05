@@ -107,6 +107,7 @@ input {
 .userDisplay {
   background-color: #7788AA;
 }
+
 .backToProfile {
   font-size: 25px;
   font-weight: bold;
@@ -116,7 +117,7 @@ input {
 
 .currentUser {
   display: inline-block;
- font-size: 20px;
+  font-size: 20px;
 }
 
 .logOutButton {
@@ -128,30 +129,44 @@ input {
 }
 
 /*PROFILE PAGE*/
+.welcomeMessage {
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+}
+
+.profileMessage {
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 2px 2px 2px black;
+  color: #fff;
+}
+
 .addVehicleButton {
   display: block;
-  margin-left: 30px;
+  color: #fff;
+  text-align: center;
+  margin-left: 40%;
   margin-bottom: 20px;
   border-radius: 4px;
   padding-left: 10px;
   box-shadow: 1px 2px 2px 1px black;
-  font-size: 20px;
-  background-color: rgba(101, 106, 105, 0.73);
-  width: 200px;
+  font-size: 30px;
+  background-color: RGB(45,68,113);
+  width: 20%;
 }
 
 /*profile cards*/
 
 .cards {
   display: inline-block;
-  width: 300px;
+  width: 400px;
   margin: 8%;
   border: 2px solid black;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 4px 3px 5px black;
-  padding-bottom: 2%;
-  padding-left: 2%;
+  padding: 4%;
 }
 
 /*login page*/
@@ -213,4 +228,59 @@ input {
   font-size: 20px;
   font-weight: bold;
   border-radius: 7px;
+}
+
+
+/*sign up page*/
+
+.newAccountHeading {
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+}
+
+.signUpForm {
+  margin-left: 35%;
+  padding: 5%;
+  text-align: center;
+  background-color: #7788AA;
+  border: 2px solid black;
+}
+
+.signUpDetail {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.createButton {
+  display: block;
+  padding: 10px;
+  margin-top: 40px;
+  text-align: center;
+  margin-left: 40%;
+  width: 50%;
+  background-color: RGB(45,68,113);
+  box-shadow: 2px 2px 2px black;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 7px;
+}
+
+/*About page*/
+
+.aboutHeading {
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+}
+
+
+/*contact page*/
+
+.contactHeading {
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
 }
