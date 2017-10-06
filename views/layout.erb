@@ -28,7 +28,7 @@
     <a class="backToProfile" href="/profile"> back to profile </a>
   <% end %>
 
-  <% if logged_in? %>
+<% if logged_in? %>
   <p class="currentUser">current user: <%= current_user.name %></p>
   <form class="" action="/session" method="post">
     <input type="hidden" name="_method" value="delete">

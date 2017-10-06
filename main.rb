@@ -10,19 +10,17 @@ require_relative 'models/booking'
 enable :sessions
 
 helpers do
+ def current_user
+  Client.find_by(id: session[:user_id])
+ end
 
-    def current_user
-      Client.find_by(id: session[:user_id])
-    end
-
-    def logged_in?
-      if session[:user_id]
-        # current_user can be used
-        true
-      else
-        false
-      end
-    end
+ def logged_in?
+   if session[:user_id]
+    true
+   else
+    false
+   end
+ end
 
 end
 
@@ -62,17 +60,15 @@ end
 # display profile page
 get '/profile' do
   if logged_in?
-
     @cars = Car.where(client_id: current_user.id)
     # @bookings = Booking.where(client_id: current_user.id)
-
     erb :profile
   end
 end
 
 # edit your car infomation
   get '/profile/edit' do
-    if logged_in?
+   if logged_in?
     @car = Car.find_by(client_id: current_user.id)
     erb :edit
    end
@@ -91,7 +87,7 @@ end
 
 # delete a car from your profile
 delete '/cars/:id' do
-  if logged_in?
+ if logged_in?
   return 'go away' unless logged_in?
   @car = Car.find(params[:id])
   @car.destroy
@@ -100,14 +96,14 @@ delete '/cars/:id' do
 end
 
 post '/booking/:id' do
-  if logged_in?
-  @booking = Booking.new
-  @booking.client_id = params[:client_id]
-  @booking.car_id = params[:car_id]
-  @booking.date_booked = params[:date_booked]
-  @booking.issue = params[:issue]
-  @booking.save
-  redirect "/profile"
+ if logged_in?
+   @booking = Booking.new
+   @booking.client_id = params[:client_id]
+   @booking.car_id = params[:car_id]
+   @booking.date_booked = params[:date_booked]
+   @booking.issue = params[:issue]
+   @booking.save
+   redirect "/profile"
  end
 end
 
@@ -119,6 +115,7 @@ delete '/booking/:id' do
     redirect "/profile"
   end
 end
+
 # login page
 get '/login' do
   if (!current_user)

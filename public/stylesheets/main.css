@@ -236,6 +236,10 @@ input {
   width: 100%;
 }
 
+.issueBox {
+  font-size: 20px;
+}
+
 /* add a car page*/
 .addHeading {
   font-size: 40px;

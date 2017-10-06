@@ -4,14 +4,12 @@
 <a class="addVehicleButton" href="/profile/add_car"> Add your Vehicle</a>
 
 <% @cars.each do |car| %>
-  <section class= "cards">
+ <section class= "cards">
   <div class="carDetailBlock">
-
-  <h2 class="carDetail">Make: <%= car.make %></h2>
-  <h2 class="carDetail">Year: <%= car.year %></h2>
-  <h2 class="carDetail">Car rego: <%= car.registration %></h2>
-
-  <a class="editInfoBtn" href="/profile/edit">Edit your Infomation</a>
+   <h2 class="carDetail">Make: <%= car.make %></h2>
+   <h2 class="carDetail">Year: <%= car.year %></h2>
+   <h2 class="carDetail">Car rego: <%= car.registration %></h2>
+   <a class="editInfoBtn" href="/profile/edit">Edit your Infomation</a>
   </div>
 
  <% if  session[:user_id]%>
@@ -23,13 +21,13 @@
   </form>
  <% end %>
 
- <h2>Make a booking</h2>
- <form action="/booking/<%= car.id%>" method="post">
+<h2>Make a booking</h2>
+<form action="/booking/<%= car.id%>" method="post">
    <input type="hidden" name="car_id" value="<%= car.id %>">
    <input type="hidden" name="client_id" value="<%= current_user.id%>">
    <input type="date" name="date_booked" value="">
    <h2>Enter your current issue</h2>
-   <textarea name="issue" rows="8" cols="80"></textarea>
+   <textarea class="issueBox" name="issue" rows="8" cols="40"></textarea>
 
    <button class="bookCarBtn" type="submit">book your service</button>
  </form>
