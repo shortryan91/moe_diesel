@@ -1,14 +1,16 @@
 
- <h2>Edit Your Vehicle</h2>
+ <h2 class="editHeading">Edit Your Vehicle</h2>
 
-<form class="" action="/profile" method="post">
+<form class="editForm" action="/profile" method="post">
 
   <input type="hidden" name="_method" value="put">
-
+  <h2>Make</h2>
   <input type="text" name="make" value="<%= @car.make%>" placeholder="make">
+  <h2>Year</h2>
   <input type="text" name="year" value="<%= @car.year%>" placeholder="year">
+  <h2>Registration</h2>
   <input type="text" name="registration" value="<%= @car.registration%>" placeholder="registration">
 
-  <button type="submit"> Add Your Vehicle </button>
+  <button class="editVehicleButton" type="submit"> Add Your Vehicle </button>
 
 </form>

@@ -53,7 +53,7 @@ post '/profile' do
     @car.make = params[:make]
     @car.year = params[:year]
     @car.registration = params[:registration]
-    @car.client_id = params[:id]
+    @car.client_id = current_user.id
     @car.save
     redirect "/profile"
   end
@@ -105,6 +105,7 @@ post '/booking/:id' do
   @booking.client_id = params[:client_id]
   @booking.car_id = params[:car_id]
   @booking.date_booked = params[:date_booked]
+  @booking.issue = params[:issue]
   @booking.save
   redirect "/profile"
  end
